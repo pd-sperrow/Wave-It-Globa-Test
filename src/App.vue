@@ -1,28 +1,28 @@
 <template>
   <div id="app">
     <section class="content mt-4">
-      <search-manager /> 
+      <search-manager />
       <search-details />
     </section>
   </div>
 </template>
 
 <script>
-  import SearchManager from './components/SearchManager/SearchManager.vue'
-  import SearchDetails from './components/SearchDetails/SearchDetails.vue'
+import SearchManager from './components/SearchManager/SearchManager.vue'
+import SearchDetails from './components/SearchDetails/SearchDetails.vue'
 
-  export default {
-    name: 'App',
-    components: {
-      SearchManager,
-      SearchDetails
-    },
-    data () {
-      return {
-        title: 'Wave it global'
-      }
+export default {
+  name: 'App',
+  components: {
+    SearchManager,
+    SearchDetails
+  },
+  data () {
+    return {
+      title: 'Wave it global'
     }
   }
+}
 </script>
 
 <style>
@@ -33,7 +33,6 @@
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 600;
     color: #2c3e50;
   }
   .content {

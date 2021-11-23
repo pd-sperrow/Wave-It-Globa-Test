@@ -5,15 +5,15 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      profile: {
-        type: Object,
-        required: true
-      }
-    },
-    name: 'GridView',
-  }
+export default {
+  props: {
+    profile: {
+      type: Object,
+      required: true
+    }
+  },
+  name: 'GridView',
+}
 </script>
 
 <style>

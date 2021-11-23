@@ -12,7 +12,7 @@
               </div>
             </div>
             <b-row class="mb-4">
-              <b-col>
+              <b-col cols="4">
                 <div class="color-primary">
                   <b-iconstack font-scale="2" class="cursor-pointer" @click="changeGridType('grid')">
                     <b-icon v-if="gridType == 'grid'" stacked icon="square-fill"></b-icon>
@@ -27,16 +27,22 @@
                   </b-iconstack>
                 </div>
               </b-col>
-              <b-col class="tags">
+              <b-col cols="8" class="tags d-flex">
                 <b-form-tags
                   input-id="tags-pills"
                   v-model="tags"
                   tag-variant="primary"
                   tag-pills
                   size="md"
-                  placeholder="See More"
+                  placeholder=""
                 >
                 </b-form-tags>
+                <div class="see-more">
+                  <a href="">
+                    <span class="text-danger cursor-pointer text-decoration-underline">See More</span>
+                  </a>
+
+                </div>
               </b-col>
             </b-row>
             <template v-if="gridType === 'grid'">
@@ -63,178 +69,203 @@
 import IconButton from '../IconButton.vue'
 import GridView from '../View/GridView.vue'
 import ListView from '../View/ListView.vue'
-  export default {
-    name: 'SearchDetails',
-    components: { IconButton, ListView, GridView },
-    data() {
-      return {
-        gridType: 'list',
-        tags: ['Male', 'London', '27-40Yrs', 'Islam', 'Pakistani'],
-        profiles: [
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          },
-          {
-            name: 'Justin Webb',
-            address: 'London, UK',
-            age: 27,
-            religion: 'Islam'
-          }
-        ]
-      }
-    },
-    methods: {
-      changeGridType (type) {
-        this.gridType = type
-      }
-    },
-  }
+export default {
+  name: 'SearchDetails',
+  components: { IconButton, ListView, GridView },
+  data() {
+    return {
+      gridType: 'list',
+      tags: ['Male', 'London', '27-40Yrs', 'Islam', 'Pakistani'],
+      profiles: [
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        },
+        {
+          name: 'Justin Webb',
+          address: 'London, UK',
+          age: 27,
+          religion: 'Islam',
+          avatar: "https://image.freepik.com/free-photo/handsome-man-white-shirt-posing-attractive-guy-with-fashion-hairstyle-confident-man-with-short-beard-adult-boy-with-brown-hair-closeup-portrait_186202-8545.jpg"
+        }
+      ]
+    }
+  },
+  methods: {
+    changeGridType (type) {
+      this.gridType = type
+    }
+  },
+}
 </script>
 
 <style>
   .search-details {
-    width: 80%;
+    width: 70%;
   }
   .total-result {
     color: #787878;
@@ -250,5 +281,9 @@ import ListView from '../View/ListView.vue'
   .tags .b-form-tags-input::placeholder {
       color: #e00f0f;
       text-decoration: underline;
+  }
+  .see-more {
+    width: 100px;
+    margin-top: 10px;
   }
 </style>

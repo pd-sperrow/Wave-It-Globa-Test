@@ -14,6 +14,9 @@ body {
 .bg-primary {
     background-color: #6158a7 !important;
 }
+.bg-danger {
+    background-color: #e31f75 !important;
+}
 .color-gray {
     color: #b3b3b3;
 }
