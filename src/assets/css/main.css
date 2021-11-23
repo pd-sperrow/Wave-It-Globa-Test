@@ -1,0 +1,25 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body {
+    background-color: #fbfbfd;
+}
+.form-control {
+    background-color: #fbfbfd;
+}
+.bg-gray {
+    background-color: #a59b9b !important;
+}
+.bg-primary {
+    background-color: #6158a7 !important;
+}
+.color-gray {
+    color: #b3b3b3;
+}
+.color-primary {
+    color: #6158a7;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
